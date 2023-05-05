@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  dev-db:
+    image: "postgres:12.14-alpine"
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "root"
+      POSTGRES_DATABASE: "nestjs"
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    ports:
+      - "5000:5432"
+    expose:
+      - 5000
+    networks:
+      - nestjs
+    volumes:
+      - data:/var/lib/posgresql/data
+networks:
+  nestjs:
+volumes:
+  data:
