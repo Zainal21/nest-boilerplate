@@ -1,6 +1,6 @@
-import environments from "@core/environments";
-import { Injectable, Scope } from "@nestjs/common";
-import { JwtService, JwtSignOptions, JwtVerifyOptions } from "@nestjs/jwt";
+import environments from '@core/environments';
+import { Injectable, Scope } from '@nestjs/common';
+import { JwtService, JwtSignOptions, JwtVerifyOptions } from '@nestjs/jwt';
 
 export class RefreshTokenConfigFactory {
   static instance: RefreshTokenConfigFactory;
@@ -8,12 +8,12 @@ export class RefreshTokenConfigFactory {
   verifyOptions: JwtVerifyOptions;
   private constructor() {
     this.signOptions = {
-      algorithm: "HS256",
+      algorithm: 'HS256',
       secret: environments.JWT_REFRESH_TOKEN_SECRET,
       expiresIn: environments.JWT_REFRESH_TOKEN_EXPIRES_IN,
     };
     this.verifyOptions = {
-      algorithms: ["HS256"],
+      algorithms: ['HS256'],
       secret: environments.JWT_REFRESH_TOKEN_SECRET,
     };
   }
