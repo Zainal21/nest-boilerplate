@@ -14,7 +14,7 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
       username: environments.DB_USERNAME,
       database: environments.DB_DATABASE,
       port: environments.DB_PORT,
-      password: environments.DB_PWD,
+      password: environments.DB_PASSWORD,
       autoLoadEntities: true,
       entities: getMetadataArgsStorage().tables.map((tb) => tb.target),
     };

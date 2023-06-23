@@ -7,7 +7,7 @@ export const dataSourceOptions: DataSourceOptions = {
   database: environments.DB_DATABASE,
   username: environments.DB_USERNAME,
   port: environments.DB_PORT,
-  password: environments.DB_PWD,
+  password: environments.DB_PASSWORD,
   entities: ["dist/modules/**/*.entity.js"],
   migrations: ["dist/core/migrations/*.js"],
 };
